@@ -1386,6 +1386,11 @@ export default {
 .subconverter-layout {
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 1032px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 16px;
 }
 
 .subconverter-card,
@@ -1704,6 +1709,10 @@ export default {
   .subconverter-card .el-card__body {
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  .subconverter-layout {
+    padding: 0;
   }
 
   .subconverter-hero__topline {
