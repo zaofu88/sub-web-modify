@@ -178,19 +178,6 @@
                   :disabled="customSubUrl.length === 0">生成短链接
                 </el-button>
               </el-form-item>
-              <el-form-item label-width="0px" style="text-align: center">
-                <el-button style="width: 120px" type="primary" @click="dialogUploadConfigVisible = true"
-                  icon="el-icon-upload" :loading="loading2">自定义配置
-                </el-button>
-                <el-button style="width: 120px" type="primary" @click="dialogLoadConfigVisible = true"
-                  icon="el-icon-copy-document" :loading="loading3">从URL解析
-                </el-button>
-              </el-form-item>
-              <el-form-item label-width="0px" style="text-align: center">
-                <el-button style="width: 250px;" type="success" icon="el-icon-video-play"
-                  @click="centerDialogVisible = true">视频教程
-                </el-button>
-              </el-form-item>
             </el-form>
           </el-container>
         </el-card>
@@ -206,10 +193,6 @@
       <div label-width="0px" style="text-align: center;margin: 3vh 0 2vh">
         <el-button style="width: 200px;" type="danger" icon="el-icon-video-play"
           @click="gotoAdvancedVideo(); centerDialogVisible = false">进阶视频教程
-        </el-button>
-      </div>
-      <div label-width="0px" style="text-align: center;margin: 3vh 0 2vh">
-        <el-button style="width: 200px;" type="warning" icon="el-icon-download" @click="toolsDown">代理工具集合
         </el-button>
       </div>
     </el-dialog>
@@ -299,7 +282,6 @@ const advancedVideo = process.env.VUE_APP_ADVANCED_VIDEO
 const tgBotLink = process.env.VUE_APP_BOT_LINK
 const yglink = process.env.VUE_APP_YOUTUBE_LINK
 const bzlink = process.env.VUE_APP_BILIBILI_LINK
-const downld = 'http://' + window.location.host + '/download.html'
 export default {
   data() {
     return {
@@ -921,9 +903,6 @@ export default {
     },
     gotoYouTuBe() {
       window.open(yglink);
-    },
-    toolsDown() {
-      window.open(downld);
     },
     gotoBasicVideo() {
       this.$alert("别忘了关注友善的肥羊哦！", {
