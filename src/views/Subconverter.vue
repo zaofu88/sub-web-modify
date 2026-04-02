@@ -179,6 +179,9 @@
                 <el-button class="subconverter-main-btn subconverter-main-btn--alt" style="width: 120px" type="danger" @click="makeShortUrl" :loading="loading1"
                   :disabled="customSubUrl.length === 0">生成短链接
                 </el-button>
+                <el-button class="subconverter-main-btn subconverter-main-btn--parse" style="width: 120px" type="primary"
+                  icon="el-icon-copy-document" @click="dialogLoadConfigVisible = true" :loading="loading3">从URL解析
+                </el-button>
               </el-form-item>
             </el-form>
           </el-container>
@@ -1616,6 +1619,10 @@ export default {
 
 .subconverter-main-btn--alt {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0, rgba(51, 65, 85, 0.92) 100%) !important;
+}
+
+.subconverter-main-btn--parse {
+  background: linear-gradient(135deg, #0369a1 0, #0ea5e9 100%) !important;
 }
 
 .subconverter-social-dock {
