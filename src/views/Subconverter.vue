@@ -1603,6 +1603,10 @@ export default {
   margin-left: 0 !important;
 }
 
+.subconverter-action-row .subconverter-main-btn + .subconverter-main-btn {
+  margin-left: 0;
+}
+
 .subconverter-main-btn {
   width: 160px !important;
   height: 48px;
